@@ -2,7 +2,7 @@ import React from 'react';
 import './tachyons.min.css';
 
 // Data for test
-// import sampleData from './assets/data';
+import sampleData from './assets/data';
 import { getLazadaProduct } from './actions';
 
 // COMPONENTS
@@ -25,24 +25,24 @@ class App extends React.PureComponent {
 
     this.setState({ isLoading: true })
 
-    getLazadaProduct(arrUrls)
-      .then(arrResult => {
-        console.log('Got data!!: ', arrResult);
-        this.setState({
-          data: arrResult,
-          isLoading: false
-        })
-      })
+    // getLazadaProduct(arrUrls)
+    //   .then(arrResult => {
+    //     console.log('Got data!!: ', arrResult);
+    //     this.setState({
+    //       data: arrResult,
+    //       isLoading: false
+    //     })
+    //   })
 
-    // if (arrUrls.length < 2) {
-    //   this.setState({
-    //     data: []
-    //   });
-    // } else {
-    //   this.setState({
-    //     data: sampleData
-    //   });
-    // }
+    if (arrUrls.length < 2) {
+      this.setState({
+        data: []
+      });
+    } else {
+      this.setState({
+        data: sampleData
+      });
+    }
   }
 
   render() {

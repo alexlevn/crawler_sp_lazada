@@ -11,3 +11,5 @@
 ```
     /so-sanh-sp-lazada/ yarn && yarn start
 ```
+
+*2021 lazada changed the layout, so the crawler now can not get data. Run with test branch for summary the project.*
